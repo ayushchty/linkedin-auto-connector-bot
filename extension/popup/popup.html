@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn Auto Connector</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>LinkedIn Auto Connector</h1>
+      <p class="subtitle">Use on LinkedIn People Search only</p>
+    </header>
+
+    <div class="section">
+      <label for="message">Connection message</label>
+      <textarea id="message" rows="4" placeholder="Hi, I'd like to connect with you."></textarea>
+    </div>
+
+    <div class="section">
+      <label for="limit">Max requests per run</label>
+      <input type="number" id="limit" min="1" max="80" value="10" />
+      <p class="hint">Stay under ~80/week to reduce risk of restrictions.</p>
+    </div>
+
+    <div class="section status-section">
+      <span class="status-label">This session:</span>
+      <span id="stats">0 sent</span>
+      <button type="button" id="btnResetStats" class="link-btn">Reset</button>
+    </div>
+
+    <div class="actions">
+      <button id="btnStart" class="btn btn-primary">Start</button>
+      <button id="btnStop" class="btn btn-secondary" disabled>Stop</button>
+    </div>
+
+    <p class="warning">
+      Use at your own risk. Automated requests may violate LinkedIn's terms.
+    </p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Auto Connector",
+  "version": "1.0.0",
+  "description": "Send connection requests with a custom note on LinkedIn search results. Use on your own risk.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://www.linkedin.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "LinkedIn Auto Connector"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/search/results/people*"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

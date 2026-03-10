@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #f8fafc;
+  min-width: 320px;
+  max-width: 380px;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header h1 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.section {
+  margin-bottom: 14px;
+}
+
+.section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.section textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.section input[type="number"] {
+  width: 80px;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.section input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+}
+
+.hint {
+  margin: 6px 0 0 0;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-label {
+  font-weight: 500;
+  color: #64748b;
+}
+
+#stats {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.link-btn {
+  margin-left: auto;
+  padding: 4px 8px;
+  border: none;
+  background: none;
+  color: #64748b;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link-btn:hover {
+  color: #0ea5e9;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0284c7;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.warning {
+  margin: 12px 0 0 0;
+  padding: 10px;
+  font-size: 11px;
+  color: #92400e;
+  background: #fef3c7;
+  border-radius: 6px;
+}
